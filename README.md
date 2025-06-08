@@ -23,4 +23,4 @@ Supporting materials for presentation about fundamentals of security research fo
   - Run `nuclei --version` to get installed version. It will install templates on first launch.
 - [ ] Download this repo for example vulnerable Python library to follow exercises in tutorial.
 
-\* Optionally you can use Codespaces in either VSCode or a browser and issue CodeQL queries online. 
+\* Optionally you can use [Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces) in either VSCode or a browser and issue CodeQL queries online. 
