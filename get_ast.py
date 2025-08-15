@@ -1,7 +1,6 @@
-from ast import parse
-from astpretty import pprint
+from ast import parse, dump
 from sys import argv
 
 file = open(argv[1])
 tree = parse(file.read())
-pprint(tree)
+print(dump(tree, indent=2))
