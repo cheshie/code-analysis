@@ -141,6 +141,18 @@ Again, even this result could be very large in a complex codebase. Any potential
 * Include functions with arguments that come from specific input functions (i.e., to track variable to its source - unfortunately, not possible easily in Bandit, since it is missing taint tracking capabilities)
 
 <details> 
-  <summary>Q7: Adding to previous conditions, find only imported functions. What functions did our plugin find?</summary>
-   A7: In Progress
+  <summary>Q7: Adding to previous conditions, find only imported variables. What variable names did our plugin find?</summary>
+   A7: argv, join
+</details>
+
+With list of imported names from modules, next action is to understand how these functions work. Starting with `os.path.join`, primary source of information as official documentation (https://docs.python.org/3/library/os.path.html#os.path.join): 
+> If a segment is an absolute path (which on Windows requires both a drive and a root), then all previous segments are ignored and joining continues from the absolute path segment.
+
+It seems that if last provided argument is variable, then attacker might provide path starting with slash (`'/...'`) and the function will ignore all previous path elements, thus allowing function to access arbitrary locations on the filesystem. 
+
+Final step would be then to write complete query to identify the culprit.
+
+<details> 
+  <summary>Q8: Considering previous exercises, write a complete plugin to detect call to os.path.join with last positional argument controlled by user.</summary>
+   A8: Complete plugin script
 </details>
