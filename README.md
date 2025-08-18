@@ -116,10 +116,14 @@ $ bandit -r ex3.py -t B1337 --format custom
 [main]	INFO	running on Python 3.13.3
 ```
 
+### Modify the plugin
+
 In order to avoid installing the plugin again after each change, modify this file instead (your Python version might be different):
 ```
 bvenv/lib/python3.13/site-packages/plugin_test/test.py
 ```
+
+### Analyzing function calls
 
 First step to discover vulnerability is to understand application under analysis. Adjust this plugin to return issue for all function calls thorough the file `ex3.py`
 
@@ -156,3 +160,14 @@ Final step would be then to write complete query to identify the culprit.
   <summary>Q8: Considering previous exercises, write a complete plugin to detect call to os.path.join with last positional argument controlled by user.</summary>
    A8: Complete plugin script
 </details>
+
+### Case studies 
+
+#### Case 1 
+Download setuptools from github: 
+https://github.com/pypa/setuptools/releases/tag/v78.1.0
+
+
+#### Case 2
+Download InvokeAI from github: 
+https://github.com/invoke-ai/InvokeAI/releases/tag/v5.3.1 
