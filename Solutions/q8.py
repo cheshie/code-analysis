@@ -9,7 +9,7 @@ from bandit.core import test_properties as test
 def os_path_join(context):
     if (
     context.is_module_imported_like("os.path")
-    and context.call_function_name == "join"
+    and context.call_function_name_qual == "os.path.join"
     and isinstance(context.node.args[-1], Name)
     ):
         return bandit.Issue(

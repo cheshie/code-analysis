@@ -1,9 +1,9 @@
 from sys import argv
-from os.path import join as myfunction
+from os.path import join
 
 def read_file(name: str) -> str:
     """Returns the content of the file in restricted directory"""
-    file_path = get_file_name(myfunction('/var', 'restricted', name))
+    file_path = get_file_name(join('/var', 'restricted', name))
     try:
         with open(file_path, "r") as file:
             print("[*] Reading file:", file_path)

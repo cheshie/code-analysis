@@ -10,9 +10,8 @@ Supporting materials for presentation about fundamentals of security research fo
 - [ ] Set up a linux VM to use in exercises
 - [ ] Set up virtual environment
 ```
-$ cd ~/Documents
 $ python3 -m venv bvenv
-$ source bvebv/bin/activate
+$ source bvenv/bin/activate
 ```
 - [ ] Install [Bandit](https://bandit.readthedocs.io/en/latest/start.html),
   - Install from PIP: `pip install bandit`
@@ -158,16 +157,16 @@ Final step would be then to write complete query to identify the culprit.
 
 <details> 
   <summary>Q8: Considering previous exercises, write a complete plugin to detect call to os.path.join with last positional argument controlled by user.</summary>
-   A8: Complete plugin script
+   A8: Complete plugin script (solution in file q8.py)
 </details>
 
 ### Case studies 
 
 #### Case 1 
 Download setuptools from github: 
-https://github.com/pypa/setuptools/releases/tag/v78.1.0
+https://github.com/pypa/setuptools/releases/tag/v78.1.0 (more info: CVE-2025-47273)
 
 
 #### Case 2
 Download InvokeAI from github: 
-https://github.com/invoke-ai/InvokeAI/releases/tag/v5.3.1 
+https://github.com/invoke-ai/InvokeAI/releases/tag/v5.3.1 (more info: CVE-2024-12029)

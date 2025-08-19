@@ -52,11 +52,9 @@ from bandit.core import test_properties as test
 from bandit.core.issue import Cwe
 
 @test.checks("Call")
-@test.test_id("B1337")
+@test.test_id("B###")
 def main_check(context):
-  print(context)
-  print(dir(context))
-  if False:
+  if True:
     return bandit.Issue(
                 severity=bandit.LOW,
                 confidence=bandit.LOW,
