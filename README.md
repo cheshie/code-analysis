@@ -20,6 +20,7 @@ $ source bvenv/bin/activate
 bandit 1.8.6
 python version = 3.13.3
 ```
+- [ ] Install library to display information about AST nodes: `pip install astpretty`
 - [ ] Download this repository to follow exercises in the tutorial
 
 ## Exercises
